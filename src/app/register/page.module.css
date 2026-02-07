@@ -1,0 +1,639 @@
+/* Saffron & Institutional Theme */
+.pageWrapper {
+    min-height: calc(100vh - var(--header-height));
+    background-color: var(--background-color);
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.card {
+    background: white;
+    padding: 2.5rem;
+    border-radius: var(--radius-lg);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    width: 100%;
+    max-width: 800px;
+    border: 1px solid var(--border-color);
+}
+
+.title {
+    color: #202124;
+    /* Google black for light mode */
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+.subtitle {
+    color: #5F6368;
+    /* Google grey for light mode */
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 1rem;
+}
+
+/* Form Grid */
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+/* Form Groups */
+.formGroup {
+    margin-bottom: 1rem;
+}
+
+.label {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    font-weight: 600;
+    color: #202124;
+    /* Google black for light mode */
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+}
+
+.labelIcon {
+    width: 18px;
+    height: 18px;
+    color: #202124;
+    /* Google black for light mode */
+}
+
+.input,
+.select,
+.textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    font-size: 1rem;
+    transition: all 0.2s;
+}
+
+.input:focus,
+.select:focus,
+.textarea:focus {
+    outline: none;
+    border-color: var(--secondary-color);
+    /* Saffron Focus */
+    box-shadow: 0 0 0 3px rgba(255, 153, 51, 0.2);
+}
+
+/* Phone Group */
+.phoneGroup {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.countrySelect {
+    width: 100px;
+    padding: 0.75rem;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    background-color: #f9fafb;
+}
+
+/* Submit Button */
+.submitBtn {
+    width: 100%;
+    margin-top: 2rem;
+    padding: 1rem;
+    background-color: var(--secondary-color);
+    /* Saffron Button */
+    color: white;
+    border: none;
+    border-radius: var(--radius-md);
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.submitBtn:hover {
+    background-color: #e68a00;
+    /* Darker Saffron */
+}
+
+.hint {
+    font-size: 0.8rem;
+    color: #5F6368;
+    /* Google grey for light mode */
+    margin-top: 0.25rem;
+    display: block;
+}
+
+/* File Upload */
+.photoUploadContainer {
+    border: 2px dashed var(--border-color);
+    border-radius: var(--radius-md);
+    padding: 1.5rem;
+    text-align: center;
+    transition: border-color 0.2s;
+    background: #FAFAFA;
+}
+
+.photoUploadContainer:hover {
+    border-color: var(--secondary-color);
+}
+
+.fileLabel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    color: #202124;
+    /* Google black for light mode */
+}
+
+.uploadIcon {
+    width: 32px;
+    height: 32px;
+    color: #202124;
+    /* Google black for light mode */
+}
+
+.fileInput {
+    display: none;
+}
+
+.previewWrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.previewImage {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.removePreviewBtn {
+    display: block;
+    margin: 0.5rem auto 0;
+    background: none;
+    border: none;
+    color: #ef4444;
+    font-size: 0.9rem;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .pageWrapper {
+        padding: 1rem;
+    }
+
+    .card {
+        padding: 1.5rem;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Success Card */
+.successCard {
+    background: white;
+    padding: 3rem;
+    border-radius: var(--radius-lg);
+    text-align: center;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    width: 90%;
+    border-top: 5px solid var(--secondary-color);
+}
+
+.successIconWrapper {
+    width: 80px;
+    height: 80px;
+    background: #FEF3C7;
+    /* Light Saffron/Yellow */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+}
+
+.successIcon {
+    width: 48px;
+    height: 48px;
+    color: var(--secondary-color);
+}
+
+.serifTitle {
+    font-family: 'Playfair Display', serif;
+    /* Restore Serif for Success Title */
+    font-size: 2rem;
+    color: #202124;
+    /* Google black for light mode */
+    margin-bottom: 0.5rem;
+}
+
+/* Enhanced Success Page */
+.successPageWrapper {
+    min-height: 100vh;
+    background-color: var(--background-color);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 3rem 1rem;
+}
+
+.welcomeGreeting {
+    color: #5F6368;
+    /* Google grey for light mode */
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+}
+
+.welcomeGreeting strong {
+    color: #202124;
+    /* Google black for light mode */
+}
+
+.visitorDetailsCard {
+    background: #f9fafb;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+    text-align: left;
+}
+
+.profileSection {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.profileImageLarge {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid var(--secondary-color);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.detailsGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
+}
+
+.detailRow {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.detailLabel {
+    font-size: 0.75rem;
+    color: #5F6368;
+    /* Google grey for light mode */
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.detailValue {
+    font-size: 0.95rem;
+    color: #202124;
+    /* Google black for light mode */
+    font-weight: 500;
+}
+
+.approvalNote {
+    color: #202124;
+    /* Google black for light mode */
+    font-size: 0.9rem;
+    background: #FEF3C7;
+    padding: 0.75rem 1rem;
+    border-radius: var(--radius-md);
+    border-left: 4px solid var(--secondary-color);
+}
+
+/* Country Code Flag Styling */
+.countrySelect {
+    width: 110px;
+    padding: 0.75rem 0.5rem;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    background-color: #f9fafb;
+    font-size: 0.95rem;
+    flex-shrink: 0;
+}
+
+/* Toast */
+.toast {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    background: #202124;
+    /* Google black for light mode */
+    color: white;
+    padding: 0.75rem 1.25rem;
+    border-radius: var(--radius-md);
+    font-size: 0.9rem;
+    z-index: 1000;
+    animation: slideIn 0.3s ease;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Mobile Responsiveness Fixes */
+@media (max-width: 768px) {
+    .pageWrapper {
+        padding: 1rem;
+        min-height: 100vh;
+    }
+
+    .card {
+        padding: 1.25rem;
+        overflow: hidden;
+    }
+
+    .title {
+        font-size: 1.5rem;
+    }
+
+    .subtitle {
+        font-size: 0.9rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .grid>div[style*="gridColumn"] {
+        grid-column: span 1 !important;
+    }
+
+    /* Ensure all form elements have consistent full width */
+    .input,
+    .select,
+    .textarea,
+    .countrySelect {
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+        font-size: 16px;
+        /* Prevent iOS zoom on focus */
+    }
+
+    .phoneGroup {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+
+    /* Labels - ensure proper wrapping on mobile */
+    .label {
+        flex-wrap: wrap;
+        gap: 0.25rem 0.5rem;
+        font-size: 0.9rem;
+    }
+
+    /* Verified badge - stack below label text on mobile */
+    .verifiedBadge {
+        margin-left: 0;
+        margin-top: 4px;
+        font-size: 0.7rem;
+        padding: 2px 6px;
+    }
+
+    .hint {
+        font-size: 0.75rem;
+    }
+
+    .detailsGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .detailRow[style*="gridColumn"] {
+        grid-column: span 1 !important;
+    }
+
+    .successCard {
+        padding: 1.5rem 1rem;
+        max-width: 100%;
+    }
+
+    .serifTitle {
+        font-size: 1.5rem;
+    }
+
+    .submitBtn {
+        font-size: 1rem;
+        padding: 0.875rem;
+    }
+
+    /* Photo upload container mobile */
+    .photoUploadContainer {
+        padding: 1rem;
+    }
+
+    .uploadIcon {
+        width: 28px;
+        height: 28px;
+    }
+}
+
+/* ================================
+   DARK MODE OVERRIDES
+   ================================ */
+
+:global(:root.dark) .card {
+    background-color: var(--surface-color);
+    border-color: var(--border-color);
+}
+
+:global(:root.dark) .successCard {
+    background-color: var(--surface-color);
+    border-top-color: var(--secondary-color);
+}
+
+:global(:root.dark) .visitorDetailsCard {
+    background-color: rgba(255, 153, 51, 0.05);
+    border-color: var(--border-color);
+}
+
+:global(:root.dark) .input,
+:global(:root.dark) .select,
+:global(:root.dark) .textarea {
+    background-color: var(--surface-color);
+    color: var(--text-primary);
+    border-color: var(--border-color);
+}
+
+:global(:root.dark) .countrySelect {
+    background-color: var(--surface-color);
+    color: var(--text-primary);
+    border-color: var(--border-color);
+}
+
+:global(:root.dark) .photoUploadContainer {
+    background-color: rgba(255, 153, 51, 0.05);
+    border-color: var(--border-color);
+}
+
+:global(:root.dark) .fileLabel {
+    color: var(--text-secondary);
+}
+
+:global(:root.dark) .approvalNote {
+    background-color: rgba(255, 153, 51, 0.15);
+    color: var(--text-primary);
+}
+
+:global(:root.dark) .toast {
+    background-color: var(--secondary-color);
+    color: #1A202C;
+}
+
+:global(:root.dark) .submitBtn {
+    background-color: var(--secondary-color);
+    color: #1A202C;
+}
+
+:global(:root.dark) .submitBtn:hover {
+    background-color: #e68a00;
+}
+
+/* Google-style dark mode text and icon colors */
+:global(:root.dark) .title {
+    color: #E8EAED;
+    /* Google white for dark mode */
+}
+
+:global(:root.dark) .subtitle {
+    color: #9AA0A6;
+    /* Google grey for dark mode */
+}
+
+:global(:root.dark) .label {
+    color: #E8EAED;
+    /* Google white for dark mode */
+}
+
+:global(:root.dark) .labelIcon {
+    color: #E8EAED;
+    /* Google white for dark mode */
+}
+
+:global(:root.dark) .fileLabel {
+    color: #E8EAED;
+    /* Google white for dark mode */
+}
+
+:global(:root.dark) .uploadIcon {
+    color: #E8EAED;
+    /* Google white for dark mode */
+}
+
+:global(:root.dark) .hint {
+    color: #9AA0A6;
+    /* Google grey for dark mode */
+}
+
+:global(:root.dark) .detailLabel {
+    color: #9AA0A6;
+    /* Google grey for dark mode */
+}
+
+:global(:root.dark) .detailValue {
+    color: #E8EAED;
+    /* Google white for dark mode */
+}
+
+:global(:root.dark) .serifTitle {
+    color: #E8EAED;
+    /* Google white for dark mode */
+}
+
+:global(:root.dark) .welcomeGreeting {
+    color: #9AA0A6;
+    /* Google grey for dark mode */
+}
+
+:global(:root.dark) .welcomeGreeting strong {
+    color: #E8EAED;
+    /* Google white for dark mode */
+}
+
+:global(:root.dark) .removePreviewBtn {
+    color: #EA4335;
+    /* Google red for dark mode */
+}
+
+/* Verified Badge Styles - Google Colors */
+.verifiedBadge {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    margin-left: 8px;
+    padding: 2px 8px;
+    background-color: #E6F4EA;
+    /* Google light green */
+    color: #1E8E3E;
+    /* Google green */
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: 500;
+}
+
+.verifiedIcon {
+    width: 14px;
+    height: 14px;
+    color: #1E8E3E;
+    /* Google green */
+}
+
+.inputVerified {
+    border-color: #1E8E3E !important;
+    /* Google green */
+}
+
+:global(:root.dark) .verifiedBadge {
+    background-color: rgba(30, 142, 62, 0.2);
+    /* Dark mode green bg */
+    color: #81C995;
+    /* Google light green for dark mode */
+}
+
+:global(:root.dark) .verifiedIcon {
+    color: #81C995;
+    /* Google light green for dark mode */
+}
+
+:global(:root.dark) .inputVerified {
+    border-color: #81C995 !important;
+    /* Google light green for dark mode */
+}

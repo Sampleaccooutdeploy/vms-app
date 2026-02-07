@@ -1,0 +1,137 @@
+.header {
+    background-color: var(--secondary-color);
+    /* Saffron */
+    height: var(--header-height);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logoSection {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.logo {
+    height: 60px;
+    width: auto;
+    object-fit: contain;
+    user-select: none;
+}
+
+.titleWrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.orgName {
+    font-size: 1.5rem;
+    line-height: 1.2;
+    color: white;
+    /* Contrast against Saffron */
+    margin: 0;
+}
+
+.systemName {
+    font-size: 0.875rem;
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 500;
+}
+
+.nav {
+    display: flex;
+    gap: 2rem;
+}
+
+.navLink {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: var(--radius-sm);
+    transition: all 0.2s;
+}
+
+.navLink:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+}
+
+.active {
+    background-color: white;
+    color: var(--secondary-color) !important;
+    font-weight: 700;
+}
+
+.icon {
+    width: 20px;
+    height: 20px;
+}
+
+@media (max-width: 768px) {
+    .orgName {
+        font-size: 1.2rem;
+    }
+
+    .systemName {
+        display: none;
+    }
+
+    .navLink span {
+        display: none;
+    }
+
+    .container {
+        padding: 0 1rem;
+    }
+}
+
+/* Right Section with Nav and Theme Toggle */
+.rightSection {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+/* Theme Toggle Button */
+.themeToggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.2);
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.themeToggle:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    transform: scale(1.05);
+}
+
+.themeIcon {
+    width: 22px;
+    height: 22px;
+    color: white;
+}
